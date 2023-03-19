@@ -1,0 +1,88 @@
+body{
+  box-sizing: border-box;
+  background-image: url(https://img1.wallspic.com/crops/2/9/7/8/0/108792/108792-scroll-texture-pattern-sky-ink-2560x1440.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p{
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.container-costumers{
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.costumer{
+  width: 300px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding: 50px;
+}
+
+.costumer-img{
+  width: 260px;
+  height: 380px;
+}
+
+
+.description-character, p{
+  text-align: center;
+  margin-top: 50%;
+}
+
+.description-character:hover , p{
+  animation: show-text 1.3s ease-in-out 2s forwards;
+}
+
+@keyframes show-text {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.flip-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .flip-card-front {
+    transition: transform 1.5s ease-in-out;
+  }
+  
+  .flip-card-back {
+    transform: rotateX(180deg);
+    transition: transform 1s;
+    display: none;
+  }
+  
+  .flip-card:hover .flip-card-front {
+    transform: rotateY(180deg);
+    opacity: 0.2;
+    transition: ease-in-out 1.4s;
+  }
+
+  .flip-card:hover .flip-card-back {
+    display: block;
+    transform: rotateX(0deg);
+  }
+
+  .flip-back-text{
+    transition-delay: 2s;
+  }
+
